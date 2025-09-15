@@ -26,3 +26,14 @@ window.onscroll = () => {
     document.querySelector('#scroll-top').classList.remove('active');
   }
 };
+
+// Biar semua link eksternal buka di tab baru
+document.querySelectorAll("a[href]").forEach(link => {
+  let href = link.getAttribute("href");
+
+  // kalau link mulai dengan http (eksternal), tapi bukan mailto: atau tel:
+  if (href && href.startsWith("http")) {
+    link.setAttribute("target", "_blank");
+    link.setAttribute("rel", "noopener noreferrer");
+  }
+});

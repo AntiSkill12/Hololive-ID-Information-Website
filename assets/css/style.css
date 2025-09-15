@@ -154,15 +154,11 @@ header nav a:hover,
   animation: float 3s linear infinite;
 }
 
-#member1,
-#member2,
-#member3,
-#member4,
-#member5,
-#member6,
-#member7,
-#member8,
-#member9 {
+
+
+
+/* === Base wrapper semua member === */
+[id^="member"] {
   display: flex;
   flex-wrap: wrap;
   gap: 1.5rem;
@@ -170,195 +166,124 @@ header nav a:hover,
   align-items: center;
 }
 
-#member1 .image,
-#member2 .image,
-#member3 .image,
-#member4 .image,
-#member5 .image,
-#member6 .image,
-#member7 .image,
-#member8 .image,
-#member9 .image {
+/* === Base image semua member === */
+[id^="member"] .image {
   flex: 1 1 10rem;
   transition: box-shadow 0.7s ease;
   border-radius: 80px;
   overflow: hidden;
   margin: 6rem;
+
+  background: var(--bg-gradient, radial-gradient(at bottom, #ffabba, #ffc8d2));
 }
 
-#member1 .image {
-  background: radial-gradient(at bottom, #ffabba, #ffc8d2);
-}
-#member2 .image{
-  background: radial-gradient(at bottom, #cd87ff, #dea7ff);
-}
-
-#member3 .image {
-  background: radial-gradient(at bottom, #94f0a7, #c2f8c9);
-}
-
-#member4 .image {
-  background: radial-gradient(at bottom, #c61e35, #c01e35);
-}
-
-#member5 .image {
-  background: radial-gradient(at bottom, #fecd00, #fcf000);
-}
-
-#member6 .image {
-  background: radial-gradient(at bottom, #00619d, #00a1e1);
-}
-
-#member7 .image{
-  background: radial-gradient(at bottom, #5b5f77, #afb5bf);
-}
-
-#member8 .image {
-  background: radial-gradient(at bottom, #e91402, #f32902);
-}
-
-#member9 .image{
-  background: radial-gradient(at bottom, #23bedd, #9be2f0);
-}
-
-#member1 .image:hover,
-#member2 .image:hover,
-#member3 .image:hover,
-#member4 .image:hover,
-#member5 .image:hover,
-#member6 .image:hover,
-#member7 .image:hover,
-#member8 .image:hover,
-#member9 .image:hover {
+[id^="member"] .image:hover {
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.84); 
 }
 
-#member1 .image img,
-#member2 .image img,
-#member3 .image img,
-#member4 .image img,
-#member5 .image img,
-#member6 .image img,
-#member7 .image img,
-#member8 .image img,
-#member9 .image img {
+[id^="member"] .image img {
   margin-left: 20%;
   transition: transform 0.5s ease;
   transform-origin: center top; 
   width: 60%;
 }
 
-#member1 .image:hover img,
-#member2 .image:hover img,
-#member3 .image:hover img,
-#member4 .image:hover img,
-#member5 .image:hover img,
-#member6 .image:hover img,
-#member7 .image:hover img,
-#member8 .image:hover img,
-#member9 .image:hover img {
+[id^="member"] .image:hover img {
   transform: scale(2.0);  
 }
 
-#member1 .title,
-#member2 .title,
-#member3 .title,
-#member4 .title,
-#member5 .title,
-#member6 .title,
-#member7 .title,
-#member8 .title,
-#member9 .title {
+/* === Base title semua member === */
+[id^="member"] .title {
   flex: 1 1 7rem;
   padding-top: 0.5rem;
 }
 
-#member1 .title h3{
+[id^="member"] .title h3 {
   font-size: 2rem;
-  background: radial-gradient(at bottom, #ffabba, #ffc8d2);
+  background: var(--text-gradient, radial-gradient(at bottom, #ffabba, #ffc8d2));
   -webkit-background-clip: text;
-  color: transparent; 
   background-clip: text;
+  color: transparent;
 }
 
-#member2 .title h3{
-  font-size: 2rem;
-  background: radial-gradient(at bottom, #cd87ff, #dea7ff);
-  -webkit-background-clip: text;
-  color: transparent; 
-  background-clip: text;
-}
-
-#member3 .title h3{
-  font-size: 2rem;
-  background: radial-gradient(at bottom, #94f0a7, #c2f8c9);
-  -webkit-background-clip: text;
-  color: transparent; 
-  background-clip: text;
-}
-
-#member4 .title h3{
-  font-size: 2rem;
-  background: radial-gradient(at bottom, #c61e35, #c01e35);
-  -webkit-background-clip: text;
-  color: transparent; 
-  background-clip: text;
-}
-
-#member5 .title h3{
-  font-size: 2rem;
-  background: radial-gradient(at bottom, #fecd00, #fcf000);
-  -webkit-background-clip: text;
-  color: transparent; 
-  background-clip: text;
-}
-
-#member6 .title h3{
-  font-size: 2rem;
-  background: radial-gradient(at bottom, #00619d, #00a1e1);
-  -webkit-background-clip: text;
-  color: transparent; 
-  background-clip: text;
-}
-
-#member7 .title h3{
-  font-size: 2rem;
-  background: radial-gradient(at bottom, #5b5f77, #afb5bf);
-  -webkit-background-clip: text;
-  color: transparent; 
-  background-clip: text;
-}
-
-#member8 .title h3{
-  font-size: 2rem;
-  background: radial-gradient(at bottom, #e91402, #f32902);
-  -webkit-background-clip: text;
-  color: transparent; 
-  background-clip: text;
-}
-
-#member9 .title h3 {
-  font-size: 2rem;
-  background: radial-gradient(at bottom, #23bedd, #9be2f0);
-  -webkit-background-clip: text;
-  color: transparent; 
-  background-clip: text;
-}
-
-#member1 .title p,
-#member2 .title p,
-#member3 .title p,
-#member4 .title p,
-#member5 .title p,
-#member6 .title p,
-#member7 .title p,
-#member8 .title p,
-#member9 .title p {
+[id^="member"] .title p {
   font-size: 1rem;
-  color: rgb(255, 255, 255);
+  color: #fff;
   margin-right: 50px;
   text-align: justify;
 }
+
+/* === List sosial semua member === */
+[id^="member"] .title ul {
+  list-style: none;   
+  padding: 0;
+  margin: 20px 0;
+  display: flex;      
+  gap: 20px;          
+}
+
+[id^="member"] .title ul li {
+  display: inline-block;
+}
+
+/* === Base semua icon === */
+[id^="member"] .title ul li a i {
+  font-size: 26px;
+  display: inline-block;
+  color: #fff;
+
+  background-image: var(--icon-gradient, linear-gradient(90deg, #ffabba, #ffc8d2));
+  background-size: 0% 100%;
+  background-repeat: no-repeat;
+  background-position: left center;
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  transition: background-size 0.6s ease, transform 0.3s ease, color 0s 0.6s;
+  background-color: #fff;
+}
+
+[id^="member"] .title ul li a i:hover {
+  transform: scale(1.6);
+  background-size: 100% 100%;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+/* === Variasi warna per member pakai variabel === */
+#member1 { --bg-gradient: radial-gradient(at bottom, #ffabba, #ffc8d2);
+           --text-gradient: radial-gradient(at bottom, #ffabba, #ffc8d2);
+           --icon-gradient: linear-gradient(90deg, #ffabba, #ffc8d2); }
+
+#member2 { --bg-gradient: radial-gradient(at bottom, #cd87ff, #dea7ff);
+           --text-gradient: radial-gradient(at bottom, #cd87ff, #dea7ff);
+           --icon-gradient: linear-gradient(90deg, #cd87ff, #dea7ff); }
+
+#member3 { --bg-gradient: radial-gradient(at bottom, #94f0a7, #c2f8c9);
+           --text-gradient: radial-gradient(at bottom, #94f0a7, #c2f8c9);
+           --icon-gradient: linear-gradient(90deg, #94f0a7, #c2f8c9); }
+
+#member4 { --bg-gradient: radial-gradient(at bottom, #c61e35, #c01e35);
+           --text-gradient: radial-gradient(at bottom, #c61e35, #c01e35);
+           --icon-gradient: linear-gradient(90deg, #c61e35, #c01e35); }
+
+#member5 { --bg-gradient: radial-gradient(at bottom, #fecd00, #fcf000);
+           --text-gradient: radial-gradient(at bottom, #fecd00, #fcf000);
+           --icon-gradient: linear-gradient(90deg, #fecd00, #fcf000); }
+
+#member6 { --bg-gradient: radial-gradient(at bottom, #00619d, #00a1e1);
+           --text-gradient: radial-gradient(at bottom, #00619d, #00a1e1);
+           --icon-gradient: linear-gradient(90deg, #00619d, #00a1e1); }
+#member7 { --bg-gradient: radial-gradient(at bottom, #5b5f77, #afb5bf);
+           --text-gradient: radial-gradient(at bottom, #5b5f77, #afb5bf);
+           --icon-gradient: linear-gradient(90deg, #5b5f77, #afb5bf); }
+#member8 { --bg-gradient: radial-gradient(at bottom, #e91402, #f32902);
+           --text-gradient: radial-gradient(at bottom, #e91402, #f32902);
+           --icon-gradient: linear-gradient(90deg, #e91402, #f32902); }
+#member9 { --bg-gradient: radial-gradient(at bottom, #23bedd, #9be2f0);
+           --text-gradient: radial-gradient(at bottom, #23bedd, #9be2f0);
+           --icon-gradient: linear-gradient(90deg, #23bedd, #9be2f0); }
 
 .unknown {
   display: flex;
