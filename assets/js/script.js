@@ -37,3 +37,34 @@ document.querySelectorAll("a[href]").forEach(link => {
     link.setAttribute("rel", "noopener noreferrer");
   }
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+  const form = document.getElementById("contactForm");
+
+  form.addEventListener("submit", function(e) {
+    e.preventDefault(); // cegah reload default
+
+    const nama = document.getElementById("nama").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const pesan = document.getElementById("pesan").value.trim();
+
+    if (nama === "" || email === "" || pesan === "") {
+      alert("❌ Semua field wajib diisi!");
+      return;
+    }
+
+    // regex longgar: asal ada @
+    const emailPattern = /.+@.+/;
+    if (!email.match(emailPattern)) {
+      alert("❌ Format email tidak valid!");
+      return;
+    }
+
+    // jika lolos
+    alert("✅ Data valid. Siap dikirim!\nNama: " + nama + "\nEmail: " + email + "\nPesan: " + pesan);
+
+    // reset form biar kosong lagi
+    form.reset();
+  });
+});
+
